@@ -43,3 +43,13 @@
     * Tag의 Prop 를 사전 체크하는 방법
         * prop-types Lib를 이용한 Prop Type과 Require 체크
         * https://ko.reactjs.org/docs/typechecking-with-proptypes.html
+
+7. (3.0) Class Components and State
+    * Class Component
+        * 기존 예제의 Fucntion Component를 Class Component로 변경
+        * State 를 확인할 수 있는 예제 소스로 변경
+        * Class Component는 React.Component extends 하여 구현
+        * render 함수안에 기존 Function Compoent 에서 Reture 하던 내용을 구현
+        * state 변수(dictionary) 안에 state 변수들을 지정
+        * render 함수에서 state 사용 시에는 this.state.X 와 같이 기존 javascript 형태로 작성
+        * button event 도 동일하게 this.functionName 형태로 입력
