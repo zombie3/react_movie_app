@@ -53,3 +53,15 @@
         * state 변수(dictionary) 안에 state 변수들을 지정
         * render 함수에서 state 사용 시에는 this.state.X 와 같이 기존 javascript 형태로 작성
         * button event 도 동일하게 this.functionName 형태로 입력
+
+
+8. (3.1) All you need to know about State
+    * State 상태 갱신 시 this.state.count 에 직접 입력하지 말 것
+        * render 함수를 호출하지 않으므로 화면에 갱신되지 않음
+        * 이말인 즉슨 화면에 즉시 갱신이 필요없는 애들은... 성능상 쓰지 않는 방법을 생각해볼 수도 있을 듯
+    * State 상태 갱신은 this.setState 함수를 통하여 진행 가능
+        * 함수의 파라미터 값에 Dic 을 지정 하면 값을 지정 후 화면에 render
+        * render 시에는 모든 화면을 갱신하지 않고 변경된 State 부분만 갱신 (이런 로직 때문에 갱신에 대한 부하가 적음)
+        * 하지만 여기서도 바로 this.state.count 로 바로 값을 들고오면 문제나 성능상 문제가 될 수 있따고 함
+            * 정확한 원인은 찾아봐야할 듯, 아마도 mutex 처리가 자동으로 되지 않을까라고 생각해봄
+            * setState 함수 파라미터에 익명함수를 생성하면 첫번째 변수로 현재 State 를 전달 받아서 처리 가능
