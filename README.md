@@ -24,3 +24,17 @@
         * Component Function 생성
             * 다른 Component 안에서 사용 시 Tag 안에 임의 이름의 Prop 추가
             * Tag 이름과 동일한 이름의 Argument 추가
+
+4. (2.2) Dynamic Component Generation
+    * 동적으로 Component를 생성하는 방법 설명
+        * javascript의 array map 기능 설명
+        * map 기능을 이용한 Dynamic Component 생성
+
+5. (2.3) map Recap
+    * map의 다른 사용 방법 설명
+        * 무명 함수가 아닌 일반 함수 생성 후 지정하는 방식
+    * render 시 생성 되는 객체와 방식 설명 (React Element)
+    * 에러 체크
+        * React element 생성 시 key 지정이 필수
+            * React 내부에서 사용되는 값
+        * missing img alt tagcode - 가이드 라인이 되는 것을 설명
