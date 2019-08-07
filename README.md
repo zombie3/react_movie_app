@@ -65,3 +65,16 @@
         * 하지만 여기서도 바로 this.state.count 로 바로 값을 들고오면 문제나 성능상 문제가 될 수 있따고 함
             * 정확한 원인은 찾아봐야할 듯, 아마도 mutex 처리가 자동으로 되지 않을까라고 생각해봄
             * setState 함수 파라미터에 익명함수를 생성하면 첫번째 변수로 현재 State 를 전달 받아서 처리 가능
+
+9. (3.2) Component Life Cycle
+    * Mounting
+        * constructor
+        * componentWillMount
+        * render
+        * componentDidMount
+    * Updating
+        * componentWillUpdate
+        * render
+        * componentDidUpdate
+    * UnMounting
+        * componentWillUnmount
