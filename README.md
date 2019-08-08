@@ -78,3 +78,7 @@
         * componentDidUpdate
     * UnMounting
         * componentWillUnmount
+
+10. (4.0) Fetching Movies from API
+    * Movie app 만들기
+        * API를 이용한 데이터를 들고 올때 비동기 처리 추가
