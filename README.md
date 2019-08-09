@@ -82,3 +82,6 @@
 10. (4.0) Fetching Movies from API
     * Movie app 만들기
         * API를 이용한 데이터를 들고 올때 비동기 처리 추가
+
+11. (4.1) Rendering the Movies
+    * ES6 문법 적용 - dictionary 안의 데이터 추출
