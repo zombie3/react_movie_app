@@ -1,13 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
-import Movie from './movies';
+import Movie from './Movies';
+
+import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     isLoading: true,
     movies: []
@@ -24,17 +21,17 @@ class App extends React.Component {
   }
 
   paintLoading = () => {
-    return <div class="loader">
-      <span class="loader__text">Loading... @,.@</span>
+    return <div className="loader">
+      <span className="loader__text">Loading... @,.@</span>
     </div>;
   }
 
   paintMovie = () => {
     const { movies } = this.state;
-    
+
     console.log(movies);
 
-    return <div class="movies">
+    return <div className="movies">
       <p>Loading is done. # 3 #</p>
       {  movies.map(movie => (
         <Movie
@@ -44,15 +41,16 @@ class App extends React.Component {
           title={movie.title}
           summary={movie.summary}
           poster={movie.medium_cover_image}
+          genres={movie.genres}
         />
       ))}
     </div>;
   }
 
   render() {
-    const { isLoading, movies } = this.state;
+    const { isLoading } = this.state;
 
-    return <section class="container">
+    return <section className="container">
       {isLoading? this.paintLoading() : this.paintMovie()}
       </section>;
   }
